@@ -8,17 +8,17 @@ Usage:
 
 In your page add the following lines before the end of the head tag:
 
-```
-&lt;script src="magicgesture.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+<pre>
+<script src="magicgesture.js"></script>
+<script>
     MagicGesture.init();
-&lt;/script&gt;
-```
+</script>
+</pre>
 
 Then somewhere in the body add:
 
-```
-&lt;script&gt;
+<pre>
+<script>
 document.addEventListener("gesturestart", gestureStart, false);
 document.addEventListener("gesturechange", gestureChange, false);
 document.addEventListener("gestureend", gestureEnd, false);
@@ -37,8 +37,8 @@ function gestureChange(e){
 function gestureEnd(e){
     e.preventDefault();
 };
-&lt;/script&gt;
-```
+</script>
+</pre>
 
 More information on multi-touch gestures is available here: http://developer.apple.com/library/iOS/#documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html
 
