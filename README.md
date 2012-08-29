@@ -12,8 +12,7 @@ In your page add the following lines before the end of the head tag:
 
 <script>
     MagicGesture.init();
-</script>
-```
+</script>```
 
 Then somewhere in the body add:
 
