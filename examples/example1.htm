@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html style="overflow: hidden;">
+  <head>
+    <title>Magic Gesture Example 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 Multi Touch Photo Viewer">
+    <meta name="author" content="Piero Toffanin">
+    <style type="text/css">
+#one{
+	position: absolute;
+	top: 60px;
+	left: 40px;
+	background: red;
+	width: 200px;
+	height: 300px;
+}
+
+#two{
+	position: absolute;
+	bottom: 60px;
+	right: 40px;
+	background: green;
+	width: 200px;
+	height: 300px;
+}
+body{
+	text-align: center;
+    -webkit-user-select: none; // webkit (safari, chrome) browsers
+    -moz-user-select: none; // mozilla browsers
+    -khtml-user-select: none; // webkit (konqueror) browsers
+}
+    </style>
+    <script src="../magicgesture.js"></script>
+    <script>
+    window.onload = function(){
+    	MagicGesture.init();
+
+		document.addEventListener("gesturestart", gestureStart, false);
+		document.addEventListener("gesturechange", gestureChange, false);
+		document.addEventListener("gestureend", gestureEnd, false);
+
+		function gestureStart(e) {
+		    e.preventDefault();
+		};
+
+		function gestureChange(e){
+		    e.preventDefault();
+
+		    e.target.style.webkitTransform =
+		        'scale(' + e.scale  + ') rotate(' + e.rotation + 'deg)';
+		};
+
+		function gestureEnd(e){
+		    e.preventDefault();
+		};
+	}
+    </script> 
+   </head>
+   <body>
+   	<h2>Try me on a multi-touch device (iPhone, Android). Can you rotate these blocks?</h2>
+   	<div id="one"> </div>
+   	<div id="two"> </div>   	
+   </body>
+
+</html>
