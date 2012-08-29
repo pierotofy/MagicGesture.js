@@ -6,12 +6,14 @@ A simple gesture event generator for those multi touch devices that do not suppo
 Usage:
 ======
 
-In your page add the following lines before the </head> tag:
+In your page add the following lines before the end of the head tag:
 
 ```<script src="magicgesture.js"></script>
+
 <script>
     MagicGesture.init();
-</script>```
+</script>
+```
 
 Then somewhere in the body add:
 
