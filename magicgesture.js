@@ -207,10 +207,3 @@ var PseudoGuid = new (function() {
         return (fourChars() + fourChars() + "-" + fourChars() + "-" + fourChars() + "-" + fourChars() + "-" + fourChars() + fourChars() + fourChars());
     };
 })();
-
-
-// // TODO: check the sign of the angle
-// var v1 = [100, 0];
-// var v2 = [0, 10];
-
-// console.log(MagicGesture._angleBetweenVectors(v1, v2));
